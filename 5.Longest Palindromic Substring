@@ -24,5 +24,9 @@ class Solution(object):
 
 
 
-
+ '''
+      T = O(N^2)
+      S = O(1)
+'''
+    
         
