@@ -1,0 +1,18 @@
+class Solution(object):
+    def maxProfit(self, prices):
+        l = 0
+        r = 1
+        maxProfit = 0
+
+        while r < len(prices) :
+            #profitable or not ?
+            if prices[l] < prices[r]:
+                profit = prices[r] - prices[l]
+                maxProfit = max(profit,maxProfit)
+            else:
+                l=r
+            r+=1
+        return maxProfit   
+
+#Time Complexity : O(n)
+#Space Complexity : O(1)
