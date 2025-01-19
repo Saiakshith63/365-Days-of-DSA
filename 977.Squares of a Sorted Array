@@ -13,3 +13,5 @@ class Solution(object):
                 right -= 1
         result.reverse()        
         return result
+
+
