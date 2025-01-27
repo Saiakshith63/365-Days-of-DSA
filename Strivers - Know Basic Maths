@@ -1,0 +1,94 @@
+1.COUNT DIGITS
+--------------
+
+class Solution:
+    def evenlyDivides(self, n):
+        # code here
+        count=0
+        original=n
+        while n>0:
+            d=n%10
+            if d != 0 and original % d == 0:
+                count += 1
+            n=n//10    
+        return count 
+
+
+2.REVERSE A NUMBER 
+--------------------
+
+class Solution(object):
+    def reverse(self, x):
+        revNum=0
+        sign = -1 if x<0 else 1
+        x=abs(x)
+        while x>0:
+            d=x%10
+            x=x//10
+            revNum=(revNum*10)+d
+        revNum *= sign   
+        if revNum < - 2**31 or revNum > 2**31-1 :
+            return 0
+        return  revNum  
+
+
+3.CHECK PALINDROME
+-------------------------------
+
+class Solution(object):
+    def isPalindrome(self, x):
+        if x<0:
+            return False
+        dup=x
+        revnum=0
+        while x>0:
+            d=x%10
+            x=x//10
+            revnum=(revnum*10)+d
+        revnum
+        if revnum == dup:
+            return True
+        else:
+            return False         
+
+
+4.GCD AND LCM
+--------------------------------------
+class Solution:
+    def lcmAndGcd(self, a: int, b: int) -> List[int]:
+        def gcd(x, y):
+            while y:
+                x, y = y, x % y
+            return x
+        gcd_val = gcd(a, b)
+        lcm_val = (a * b) // gcd_val
+        return [lcm_val, gcd_val]
+
+
+5.ARMSTRONG NUMBERS
+--------------------------
+def checkArmstrong(n):
+    #write your code here !!!!!!!!!
+    dup=n
+    k=len(str(n))
+    summ=0
+    while n>0:
+        ld=n%10
+        n=n//10
+        summ=summ+(ld**k)
+     
+    if summ==dup:
+        return True
+    else:
+        return False  
+
+
+
+6.PRINT ALL DIVISORS
+----------------------------
+class Solution:
+    def sumOfDivisors(self, n):
+        total_sum = 0
+        for i in range(1, n + 1): 
+            total_sum += i * (n // i)  
+        return total_sum
