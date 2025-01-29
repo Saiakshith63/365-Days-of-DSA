@@ -1,0 +1,23 @@
+Today Topics
+
+# Basic Hashing
+
+numerical hashing
+character hashing
+
+today problem solved from GFG based on numerical hashing 
+
+
+problem :  Frequencies in a Limited Array
+
+class Solution:
+    # Function to count the frequency of all elements from 1 to N in the array.
+    def frequencyCount(self, arr):
+        #  code here
+        
+        k=len(arr)
+        result=[0]*k
+        for num in arr:
+            result[num-1] += 1
+        return result    
+
