@@ -1,0 +1,30 @@
+🚀 Selection Sort - The Basics! 🔍
+Selection Sort is a simple and intuitive sorting algorithm that repeatedly selects the smallest element from the unsorted portion and moves it to the sorted portion.
+
+🔹 How it Works?
+1️⃣ Find the smallest element in the unsorted part of the array.
+2️⃣ Swap it with the first element of the unsorted part.
+3️⃣ Move to the next position and repeat the process until the entire array is sorted!
+
+🔹 Characteristics of Selection Sort:
+✅ In-Place Sorting (No extra memory required)
+✅ Not Stable (Relative order of equal elements may change)
+✅ Best for Small Datasets
+
+problem solved : selection sort from GFG 
+
+class Solution: 
+    def selectionSort(self, arr):
+        #code here
+        
+        n=len(arr)
+        
+        for i in range(n-1):
+            mini=i
+            
+            for j in range(i+1,n):
+                if arr[j]<arr[mini]:
+                    mini = j
+                    
+            arr[i], arr[mini] = arr[mini], arr[i]
+
