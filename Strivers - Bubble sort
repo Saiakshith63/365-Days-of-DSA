@@ -1,0 +1,49 @@
+
+🔹 What is Bubble Sort?
+
+Bubble Sort works by repeatedly swapping adjacent elements if they are in the wrong order. This process continues until the entire array is sorted.
+
+🔹 How does it work?
+1️⃣ Compare adjacent elements.
+2️⃣ Swap them if they are in the wrong order.
+3️⃣ Repeat until the array is sorted.
+
+💡 Time Complexity:
+▪️ Best Case (Already Sorted): O(n) ✅
+▪️ Worst/Average Case: O(n²) ❌
+
+Problem Solved : Bubble Sort (GeeksforGeeks) 👆 
+
+I implemented Bubble Sort to sort an unsorted array! The key takeaway is understanding how the inner and outer loops help in pushing the largest element to its correct position in each iteration. 🔄
+
+Here’s the problem statement from the image:
+👉 Given an array arr[], sort it using Bubble Sort Algorithm.
+💡 Example:
+🔹 Input: [4, 1, 3, 9, 7]
+🔹 Output: [1, 3, 4, 7, 9]
+
+🔹 Key Learnings Today
+✅ Bubble Sort is simple but inefficient for large datasets.
+✅ Optimized Bubble Sort can reduce unnecessary passes.
+✅ Understanding sorting algorithms helps in algorithmic thinking and problem-solving skills!
+
+
+PROBLEM SOLVED : BUBBLE SORT 
+----------------------------
+
+class Solution:
+    #Function to sort the array using bubble sort algorithm.
+    def bubbleSort(self,arr):
+        # code here
+        n=len(arr) # len of arr
+        for i in range(n-1,-1,-1): # no.of steps
+        
+            for j in range(i): # inner loop
+            
+                if arr[j]>arr[j+1]: #swap condition
+                
+                    arr[j],arr[j+1] = arr[j+1], arr[j] 
+                    #swap between 2 values
+
+#time complexity : O(n^2) for worst and average cases
+                   O(n) for best case
