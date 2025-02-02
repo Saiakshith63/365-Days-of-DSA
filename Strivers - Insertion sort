@@ -1,0 +1,47 @@
+Today, I explored Insertion Sort, another fundamental sorting algorithm that works similarly to how we sort playing cards in our hands! 🃏✨
+
+🔹 What is Insertion Sort?
+Insertion Sort builds the sorted array one element at a time by placing each element in its correct position. 🔄
+
+🔹 How does it work?
+1️⃣ Consider the first element as sorted.
+2️⃣ Pick the next element and compare it with the sorted part.
+3️⃣ Shift elements if needed to make space for the new element.
+4️⃣ Repeat until the array is sorted.
+
+💡 Time Complexity:
+Best Case (Already Sorted): O(n) ✅
+Worst/Average Case: O(n²) ❌
+
+🔹 Why Use Insertion Sort?
+✅ Simple & easy to implement.
+✅ Efficient for small or nearly sorted datasets.
+✅ Stable sorting algorithm (maintains the relative order of equal elements).
+
+🔹 Key Learnings Today:
+📌 Insertion Sort is more efficient than Bubble Sort for small datasets.
+📌 Works great when the array is partially sorted.
+📌 Helps in understanding adaptive sorting techniques.
+
+
+today problem solved : Insertion sort(GFG)
+------------------------------------------
+
+
+class Solution:
+    #Function to sort the array using bubble sort algorithm.
+    def bubbleSort(self,arr):
+        # code here
+        n=len(arr) # len of arr
+        for i in range(n-1,-1,-1): # no.of steps
+        
+            for j in range(i): # inner loop
+            
+                if arr[j]>arr[j+1]: #swap condition
+                
+                    arr[j],arr[j+1] = arr[j+1], arr[j] 
+                    #swap between 2 values
+
+
+# time complexity : O(n^2) - for average and worst case
+                  : O(N) - for best case   
