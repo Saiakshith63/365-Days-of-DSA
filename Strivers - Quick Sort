@@ -1,0 +1,48 @@
+🔥 Day 35/365: Mastering Sorting Algorithms! 🔥
+
+Today was a power-packed session as I dived deep into recursive sorting techniques and tackled an interesting Quick Sort problem! 💡
+
+📌 What I solved today:
+✅ Recursive Bubble Sort 🫧
+
+Time Complexity: O(n²)
+Space Complexity: O(n) (due to recursion stack)
+✅ Recursive Insertion Sort 📌
+
+Time Complexity: O(n²)
+Space Complexity: O(n) (due to recursion stack)
+✅ Quick Sort ⚡
+
+Time Complexity: O(n log n) (Average & Best), O(n²) (Worst)
+Space Complexity: O(log n) (Average & Best), O(n) (Worst) due to recursion stack
+✅ Quick Sort Problem Solving 🏆
+
+🔍 Key Takeaways:
+🔹 Recursion makes sorting algorithms more intuitive but also requires careful handling of base cases.
+🔹 Quick Sort, with its Divide & Conquer strategy, is super efficient with an average O(n log n) time complexity.
+🔹 Understanding partitioning techniques is crucial for optimizing Quick Sort’s performance.
+
+
+Today Problem : Quick Sort ( GeeksforGeeks)
+-------------------------------------------
+
+class Solution:
+    def quickSort(self,arr,low,high):
+        if low<high:
+            pIndex=self.partition(arr,low,high)
+            self.quickSort(arr,low,pIndex-1)
+            self.quickSort(arr,pIndex+1,high)
+            
+    def partition(self,arr,low,high):
+        pivot=arr[low]
+        i=low
+        j=high
+        while i<j:
+            while arr[i]<=pivot and i<=high-1:
+                i += 1
+            while arr[j]>pivot  and j>=low-1:
+                j -= 1
+            if i<j:
+                arr[i],arr[j]=arr[j],arr[i]
+        arr[low],arr[j] = arr[j],arr[low]
+        return j  
