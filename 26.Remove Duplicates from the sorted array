@@ -1,0 +1,17 @@
+4th problem from strivers - DSA sheet arrays easy 
+
+remove duplicates from the sorted array
+
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        i=0
+        n=len(nums)
+        for j in range(1,n):
+            if nums[j] != nums[i]:
+                nums[i+1] =nums[j]
+                i += 1
+        return i+1             
+
+#time complexity : O(N)
+#space complexity : O(1)
