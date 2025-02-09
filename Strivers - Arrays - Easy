@@ -1,0 +1,53 @@
+
+
+today done 2 problems from strivers - sheet - easy 
+----------------------------------------------------
+
+1. Left Rotate an Array by One Place
+
+📜 Problem Statement:
+
+Given an array arr[] of size N, shift all elements one place to the left. The first element moves to the end, and all others shift left.
+
+🛠 Approach:
+🔹 Store the first element in a temp variable.
+🔹 Shift all elements to the left by one index.
+🔹 Place the stored element at the last index.
+
+⏳ Time Complexity: O(N) (Single traversal)
+💾 Space Complexity: O(1) (In-place modification)
+
+
+code :
+
+def rotateArray(arr: [], n: int) -> []:
+
+    temp=arr[0]
+    for i in range(1,n):
+        arr[i-1]=arr[i]
+    arr[n-1]        = temp
+    return arr
+
+
+2.left rotate an array by k places 
+--------------------------------------
+
+class Solution(object):
+    def rotate(self, nums, k):
+        k=k%len(nums) 
+
+        l,r=0,len(nums)-1
+        while l<r:
+            nums[l],nums[r]=nums[r],nums[l] #reversing the array
+            l,r=l+1,r-1
+        l,r = 0 , k-1
+        while l<r:
+            nums[l],nums[r]=nums[r],nums[l]
+            l,r=l+1,r-1
+        l,r=k,len(nums)-1
+        while l<r:
+            nums[l],nums[r]=nums[r],nums[l]
+            l,r=l+1,r-1
+        #we not need to return anything 
+
+
