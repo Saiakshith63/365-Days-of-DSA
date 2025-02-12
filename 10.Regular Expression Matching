@@ -18,3 +18,5 @@ class Solution(object):
                 return cache[(i,j)]
             return False 
         return dfs(0,0)        
+
+
